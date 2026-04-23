@@ -11,12 +11,16 @@ int main() {
 
     printf("Digite a autorizacao especial (1/0): ");
     scanf("%d", &autorizacao);
-if((tipoUsuario == 2 ) || (tipoUsuario == 1 && horario == 8 && horario <= 18 || autorizacao == 1)){
-printf("ENTRADA PERMITIDA");
-}else{
-    printf("ENTRADA NEGADA");
-}
 
+    if ((tipoUsuario == 2) || 
+        (tipoUsuario == 1 && horario >= 8 && horario <= 18) || 
+        (autorizacao == 1)) {
+
+        printf("ENTRADA PERMITIDA\n");
+
+    } else {
+        printf("ENTRADA NEGADA\n");
+    }
 
     return 0;
 }
