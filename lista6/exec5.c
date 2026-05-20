@@ -6,7 +6,7 @@ int pos;
 float soma = 0, media;
  for(pos = 0; pos < 6; pos++){
      printf("Digite o número da posição %i: ", pos);
-     scanf("%i", &numeros[pos]);
+     scanf("%f", &numeros[pos]);
  }
  for (pos = 0; pos < 6 ; pos++){
   soma+= numeros[pos];
