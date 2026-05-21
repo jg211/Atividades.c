@@ -20,8 +20,7 @@ int main() {
             printf("TEMPERATURA FORA DA FAIXA\n");
             foraFaixa++;
         }
-
-        soma = soma + temperaturas[i];
+      soma = soma + temperaturas[i];
     }
     media = soma / 7;
     printf("\nQuantidade de temperaturas seguras: %i\n", seguras);
