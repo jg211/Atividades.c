@@ -9,18 +9,23 @@ int main() {
 
     float soma = 0;
     float media;
-    for(i = 0; i < 7; i++){
+    for(i = 0; i < 7; i++) {
+
         printf("Digite a temperatura: ");
-        scanf("%f", temperaturas[i]);
-        
-        
+        scanf("%f", &temperaturas[i]);
+        if(temperaturas[i] >= 20 && temperaturas[i] <= 30) {
+            printf("TEMPERATURA SEGURA\n");
+            seguras++;
+        } else {
+            printf("TEMPERATURA FORA DA FAIXA\n");
+            foraFaixa++;
+        }
+
+        soma = soma + temperaturas[i];
     }
-
-    // Implemente aqui:
-    // 1. Ler as 7 temperaturas e armazenar no vetor temperaturas
-    // 2. Usar if com AND para verificar a faixa segura
-    // 3. Contar temperaturas seguras e fora da faixa
-    // 4. Calcular a média
-
+    media = soma / 7;
+    printf("\nQuantidade de temperaturas seguras: %i\n", seguras);
+    printf("Quantidade de temperaturas fora da faixa: %i\n", foraFaixa);
+    printf("Media das temperaturas: %.2f\n", media);
     return 0;
 }
