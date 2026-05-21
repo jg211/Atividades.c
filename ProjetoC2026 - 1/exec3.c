@@ -10,10 +10,9 @@ int main() {
     float soma = 0;
     float media;
     for(i = 0; i < 7; i++) {
-
-        printf("Digite a temperatura: ");
-        scanf("%f", &temperaturas[i]);
-        if(temperaturas[i] >= 20 && temperaturas[i] <= 30) {
+     printf("Digite a temperatura: ");
+     scanf("%f", &temperaturas[i]);
+     if(temperaturas[i] >= 20 && temperaturas[i] <= 30) {
             printf("TEMPERATURA SEGURA\n");
             seguras++;
         } else {
