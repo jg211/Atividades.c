@@ -10,7 +10,7 @@ int main() {
     int comum = 0;
     for(i = 0; i < 10; i++){
         printf("Digite o valor da venda: \n");
-        scanf("%i", &vendas[i]);
+        scanf("%f", &vendas[i]);
         printf("Foi uma venda especial?(1/0)\n");
         scanf("%i", &vendaEspecial);
         if(vendas[i] >= 100 || vendaEspecial == 1){
