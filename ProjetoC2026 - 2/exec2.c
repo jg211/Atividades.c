@@ -1,37 +1,37 @@
 #include <stdio.h>
 
 int main() {
-    int quantidades[8];
-    int essencial;
+    int idades[10];
+    int convite;
     int i;
 
-    int urgente = 0;
-    int estoqueOk = 0;
+    int permitidas = 0;
+    int negadas = 0;
 
-    int menorQuantidade;
-  
-    for(i = 0; i < 8; i++) {
-        printf("Digite a quantidade do produto: ");
-        scanf("%d", &quantidades[i]);
-        printf("O produto e essencial? (1 = sim / 0 = nao): ");
-        scanf("%d", &essencial);
-        if(quantidades[i] < 10 && essencial == 1) {
-            printf("REPOSICAO URGENTE\n");
-            urgente++;
+    int maiorIdade;
+
+    for(i = 0; i < 10; i++) {
+        printf("Digite a idade: ");
+        scanf("%d", &idades[i]);
+        printf("Possui convite? (1 = sim / 0 = nao): ");
+        scanf("%d", &convite);
+        if(idades[i] >= 18 || convite == 1) {
+            printf("ENTRADA PERMITIDA\n");
+            permitidas++;
         } else {
-            printf("ESTOQUE OK\n");
-            estoqueOk++;
+            printf("ENTRADA NEGADA\n");
+            negadas++;
         }
         if(i == 0) {
-            menorQuantidade = quantidades[i];
+            maiorIdade = idades[i];
         } else {
-            if(quantidades[i] < menorQuantidade) {
-                menorQuantidade = quantidades[i];
+            if(idades[i] > maiorIdade) {
+                maiorIdade = idades[i];
             }
         }
     }
-    printf("\nQuantidade de produtos com reposicao urgente: %d\n", urgente);
-    printf("Quantidade de produtos com estoque ok: %d\n", estoqueOk);
-    printf("Menor quantidade registrada: %d\n", menorQuantidade);
+    printf("\nQuantidade de entradas permitidas: %d\n", permitidas);
+    printf("Quantidade de entradas negadas: %d\n", negadas);
+    printf("Maior idade registrada: %d\n", maiorIdade);
     return 0;
 }
