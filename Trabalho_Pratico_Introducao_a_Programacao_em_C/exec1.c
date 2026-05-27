@@ -22,7 +22,7 @@
 //Operador usado quando queremos que duas ou mais condições aconteçam ao mesmo tempo. Onde a condição inteira só será considerada verdadeira se todas as partes forem verdadeiras. 
 
 //OR (||): 
-//Operador que também é usado quando queremos que duas ou mais condições aconteçam ao mesmo tempo. Porém a condição inteira será considerada verdadeira se ao menos uma das partes forem verdadeiras. 
+//Operador que é usado quando queremos que pelo menos uma condição seja verdadeira. A expressão inteira só será falsa se todas forem falsas. 
 
 //PARTE 2 — Tabela Verdade 
 
@@ -59,7 +59,7 @@ p || q
 #include <stdio.h> 
  
 int main() { 
-    int idades[3]; 
+    int idades[10]; 
     int autorizacao; 
  
     int i; 
@@ -71,7 +71,7 @@ int main() {
  
     int somaIdades = 0; 
     float media; 
- for(i = 0;i < 3;i++){
+ for(i = 0;i < 10;i++){
  printf("Digite a idade do participante: ");
  scanf("%i", &idades[i]);
   printf("O participante tem autorização?(1 = sim / 0 = nao): ");
@@ -88,7 +88,7 @@ if(idades[i] >= 18 || autorizacao == 1 ){
     negados++;
 }
  }
- media = somaIdades / 3;
+ media = somaIdades / 10.0;
  printf("Quantidade de entradas liberadas: %i\n ",liberados);
  printf("Quantidade de entradas negadas: %i\n ",negados);
  printf("Media das idades dos participantes: %.2f\n ",media);
