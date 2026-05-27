@@ -16,7 +16,7 @@ int main() {
  for(i = 0;i < 3;i++){
  printf("Digite a idade do participante: ");
  scanf("%i", &idades[i]);
-  printf("O participante tem autorização?(1/0): ");
+  printf("O participante tem autorização?(1 = sim / 0 = nao): ");
   scanf("%i", &autorizacao);
   somaIdades += idades[i];
   if(idades[i] > maiorIdade) {
