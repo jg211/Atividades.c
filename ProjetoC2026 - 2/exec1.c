@@ -8,31 +8,30 @@ int main() {
     int urgente = 0;
     int estoqueOk = 0;
 
-   int menorQuantidade = 0;
+    int menorQuantidade;
   
     for(i = 0; i < 8; i++) {
-        printf("Digite a quantidade do produto %d: ", i + 1);
+        printf("Digite a quantidade do produto: ");
         scanf("%d", &quantidades[i]);
-        printf("O produto é essencial? (1 = sim / 0 = nao): ");
+        printf("O produto e essencial? (1 = sim / 0 = nao): ");
         scanf("%d", &essencial);
-        if(i == 0) {
-            menorQuantidade = quantidades[i];
-        }   
-        if(quantidades[i] < menorQuantidade) {
-            menorQuantidade = quantidades[i];
-        }
-        if(quantidades[i] < 5 && essencial == 1) {
-            printf("Produto URGENTE\n");
+        if(quantidades[i] < 10 && essencial == 1) {
+            printf("REPOSICAO URGENTE\n");
             urgente++;
         } else {
-            printf("Estoque OK\n");
+            printf("ESTOQUE OK\n");
             estoqueOk++;
         }
-        printf("\n");
+        if(i == 0) {
+            menorQuantidade = quantidades[i];
+        } else {
+            if(quantidades[i] < menorQuantidade) {
+                menorQuantidade = quantidades[i];
+            }
+        }
     }
-    printf("Produtos urgentes: %d\n", urgente);
-    printf("Produtos com estoque OK: %d\n", estoqueOk);
+    printf("\nQuantidade de produtos com reposicao urgente: %d\n", urgente);
+    printf("Quantidade de produtos com estoque ok: %d\n", estoqueOk);
     printf("Menor quantidade registrada: %d\n", menorQuantidade);
-
     return 0;
 }
