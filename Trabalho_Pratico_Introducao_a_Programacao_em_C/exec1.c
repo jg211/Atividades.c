@@ -1,6 +1,6 @@
 //PARTE TEORICA:
 //A) O que é pensamento computacional? 
-//Forma de pensar usada para resolver problemas de maneira lógica, organizada em passo a passo. 
+//Forma de pensar usada para resolver problemas de maneira lógica, organizada em passo a passo.Esta forma de pensar se baseia em quatro pilares fundamentais sendo eles decomposição, Abstração, Reconhecimento de padrões e algoritmo. 
 
 //B) Explique os conceitos: 
 
@@ -37,7 +37,7 @@
 
 //p && q 
 
-//p | q|p && q |
+//p | q |p && q |
 //V | V | TRUE | 
 //V | F | FALSE |
 //F | V | FALSE |
